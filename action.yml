@@ -1,13 +1,13 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Branch to VersionSuffix'
+description: 'Evaluate a branch and return a suitable version suffix'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  branch:
+    description: 'The branch name to evaluate'
     required: true
-    default: 'World'
+    default: 'main'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  versionSuffix:
+    description: 'The calculated version suffix'
 runs:
   using: 'node16'
   main: 'index.js'
