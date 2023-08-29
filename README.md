@@ -18,5 +18,5 @@ This action will take a branch name and calculate a suitable version suffix base
 ```yaml
 uses: actions/branch-to-versionsuffix@main
 with:
-  branch: ${{ github.ref }}
+  branchName: ${{ github.ref }}
 ```

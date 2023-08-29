@@ -1,7 +1,7 @@
 name: 'Branch to VersionSuffix'
 description: 'Evaluate a branch and return a suitable version suffix'
 inputs:
-  branch:
+  branchName:
     description: 'The branch name to evaluate'
     required: true
     default: 'main'
