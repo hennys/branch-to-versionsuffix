@@ -2,18 +2,22 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-	const branchName = core.getInput('branchName');
+  const branchName = core.getInput('branchName');
 
-    let versionSuffix = "";
+  console.log("branchName: " + branchName);
 
-	if (branchName === "main") {
-		versionSuffix = "inte"
-	} else {
-		versionSuffix = "ci"
-	}
+  let versionSuffix = "";
 
-	core.setOutput("versionSuffix", versionSuffix);
+  if (branchName === "main") {
+    versionSuffix = "inte"
+  } else {
+    versionSuffix = "ci"
+  }
+
+  console.log("versionSuffix: " + versionSuffix);
+
+  core.setOutput("versionSuffix", versionSuffix);
 
 } catch (error) {
-  	core.setFailed(error.message);
+  core.setFailed(error.message);
 }
